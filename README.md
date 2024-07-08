@@ -1,2 +1,1 @@
-# react-empty
-new react_project
+# Global Artha
