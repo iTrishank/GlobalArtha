@@ -9,6 +9,11 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   background: linear-gradient(to right, #05203c, #fff, #fff);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    background: linear-gradient(to top, #05203c, #fff);
+  }
 `;
 
 const LeftSection = styled.div`
@@ -17,6 +22,10 @@ const LeftSection = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 768px) {
+    order: 2;
+  }
 `;
 
 const RightSection = styled.div`
@@ -25,6 +34,10 @@ const RightSection = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (min-width: 768px) {
+    order: 1;
+  }
 `;
 
 const Line = styled.div`
@@ -34,6 +47,10 @@ const Line = styled.div`
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const Home = () => {
@@ -69,7 +86,13 @@ const Home = () => {
           <Text size="60px" weight={50} color="05203C" letterSpacing={15}>
             GLOBAL ARTHA
           </Text>
-          <Text size="35px" weight={200} color="05203C" textAlign="center">
+          <Text
+            sizeMobile="20px"
+            size="35px"
+            weight={200}
+            color="05203C"
+            textAlign="center"
+          >
             Business Beyond Borders
           </Text>
         </div>

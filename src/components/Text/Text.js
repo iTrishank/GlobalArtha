@@ -13,6 +13,18 @@ const CustomText = styled.div`
     ${(props) => props.padding.bottom} ${(props) => props.padding.left};
   margin: ${(props) => props.padding.top} ${(props) => props.padding.right}
     ${(props) => props.padding.bottom} ${(props) => props.padding.left};
+
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.sizeMobile};
+    font-weight: ${(props) => props.weightMobile};
+    color: ${(props) => props.colorMobile || "black"};
+    letter-spacing: ${(props) => props.letterSpacingMobile}px;
+    text-align: ${(props) => props.textAlignMobile};
+    margin: ${(props) => props.paddingMobile.top};
+    ${(props) => props.paddingMobile.right};
+    ${(props) => props.paddingMobile.bottom};
+    ${(props) => props.paddingMobile.left};
+  }
 `;
 
 const Text = ({
@@ -23,7 +35,13 @@ const Text = ({
   children,
   textAlign,
   width,
+  sizeMobile,
+  weightMobile,
+  colorMobile,
+  letterSpacingMobile = 0,
+  textAlignMobile,
   padding = { top: "0px", right: "0px", bottom: "0px", left: "0px" },
+  paddingMobile = { top: "0px", right: "0px", bottom: "0px", left: "0px" },
   margin = { top: "0px", right: "0px", bottom: "0px", left: "0px" },
 }) => {
   return (
@@ -36,6 +54,12 @@ const Text = ({
       width={width}
       padding={padding}
       margin={margin}
+      paddingMobile={paddingMobile}
+      sizeMobile={sizeMobile}
+      weightMobile={weightMobile}
+      colorMobile={colorMobile}
+      letterSpacingMobile={letterSpacingMobile}
+      textAlignMobile={textAlignMobile}
     >
       {children}
     </CustomText>

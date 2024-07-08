@@ -13,6 +13,11 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   border-right: 2px #ff97f7;
+  @media (max-width: 768px) {
+    margin-top: -100px;
+    width: 400px;
+    height: 200px;
+  }
 `;
 
 const Arrow = styled.div`
@@ -33,23 +38,37 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+  @media (max-width: 768px) {
+    left: ${(props) => props.direction === "left" && "5px"};
+    right: ${(props) => props.direction === "right" && "5px"};
+  }
 `;
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 1000px;
   display: flex;
   transition: all 0.3s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const ImageContainer = styled.div`
+  background-color: red;
   height: 100vh;
   width: 100vw;
+  @media (max-width: 768px) {
+    height: 30vh;
+    width: 100vw;
+  }
 `;
 
 const Image = styled.img`
   padding-left: 25px;
   height: 40%;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+  }
 `;
 
 const ResetButton = styled.div`
@@ -68,6 +87,9 @@ const ResetButton = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+  @media (max-width: 768px) {
+    left: 6.5%;
+  }
 `;
 
 const Slider = () => {

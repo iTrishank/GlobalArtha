@@ -16,6 +16,11 @@ const CustomButton = styled.button`
   &:hover {
     background-color: ${(props) => props.hoverColor};
   }
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-top: -40px;
+    width: 250px;
+  }
 `;
 
 const Button = ({
