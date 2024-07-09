@@ -1,0 +1,17 @@
+.subText {
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subText > :nth-child(1) {
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .subText {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}

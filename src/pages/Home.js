@@ -3,6 +3,7 @@ import Slider from "../components/Slider/Slider";
 import Text from "../components/Text/Text";
 import Button from "../components/Button/Button";
 import styled from "styled-components";
+import "./Home.css";
 
 const Container = styled.div`
   width: 100vw;
@@ -11,6 +12,8 @@ const Container = styled.div`
   background: linear-gradient(to right, #05203c, #fff, #fff);
 
   @media (max-width: 768px) {
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
     background: linear-gradient(to top, #05203c, #fff);
   }
@@ -35,7 +38,7 @@ const RightSection = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     order: 1;
   }
 `;
@@ -83,30 +86,40 @@ const Home = () => {
       <Line></Line>
       <RightSection>
         <div style={{ marginBottom: "-100px" }}>
-          <Text size="60px" weight={50} color="05203C" letterSpacing={15}>
+          <Text
+            size="60px"
+            weight={50}
+            color="05203C"
+            letterSpacing={15}
+            sizeMobile="50px"
+            letterSpacingMobile={1}
+            weightMobile={100}
+          >
             GLOBAL ARTHA
           </Text>
           <Text
-            sizeMobile="20px"
             size="35px"
             weight={200}
             color="05203C"
             textAlign="center"
+            sizeMobile="25px"
           >
             Business Beyond Borders
           </Text>
         </div>
-
-        <Text
-          size="20px"
-          weight={300}
-          color="black"
-          textAlign="center"
-          width="80%"
-        >
-          An International B2B marketplace designed to bring together
-          businessmen from around the global
-        </Text>
+        <div className="subText">
+          <Text
+            size="20px"
+            weight={300}
+            color="black"
+            textAlign="center"
+            width="80%"
+            sizeMobile="15px"
+          >
+            An International B2B marketplace designed to bring together
+            businessmen from around the global
+          </Text>
+        </div>
 
         <Text
           size="20px"
