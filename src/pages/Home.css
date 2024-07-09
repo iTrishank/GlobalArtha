@@ -15,3 +15,16 @@
     width: 100%;
   }
 }
+
+.comingSoon {
+  font-size: 20px;
+  font-weight: 400;
+  color: #05203c;
+  padding-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .comingSoon {
+    margin-top: -70px;
+  }
+}

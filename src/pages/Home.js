@@ -121,14 +121,16 @@ const Home = () => {
           </Text>
         </div>
 
-        <Text
+        {/* <Text
+          className="comingSoon"
           size="20px"
           weight={400}
           color="05203c"
           padding={{ top: "10px", right: "0px", bottom: "0px", left: "0px" }}
         >
           Coming Soon
-        </Text>
+        </Text> */}
+        <div className="comingSoon">Coming Soon</div>
       </RightSection>
     </Container>
   );

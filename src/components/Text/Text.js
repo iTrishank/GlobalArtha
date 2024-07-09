@@ -28,6 +28,7 @@ const CustomText = styled.div`
 `;
 
 const Text = ({
+  className,
   size,
   weight,
   color,
@@ -46,6 +47,7 @@ const Text = ({
 }) => {
   return (
     <CustomText
+      className={className}
       size={size}
       weight={weight}
       color={color}
